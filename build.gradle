@@ -1,7 +1,6 @@
 apply from: "$rootDir/gradle/envConfig.gradle"
 apply from: "$rootDir/gradle/versioning.gradle"
 apply plugin: 'sonar-runner'
-apply plugin: "groovy"
 
 sonarRunner {
     sonarProperties {
@@ -32,13 +31,8 @@ subprojects {
             property 'sonar.sourceEncoding', 'UTF-8'
         }
     }
-
-    dependencies {
-        // in Gradle 1.4 or earlier, replace 'compile' with 'groovy'
-        compile "org.codehaus.groovy:groovy-all:2.1.2"
-    }
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.7'
+    gradleVersion = '2.0'
 }
