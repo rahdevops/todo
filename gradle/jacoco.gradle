@@ -7,6 +7,6 @@ buildscript {
 apply plugin: "jacoco"
 
 jacoco {
-    integrationTestTaskName = 'integrationTest'
+    //integrationTestTaskName = 'integrationTest'
     toolVersion = "0.7.4.201502262128"
 }
